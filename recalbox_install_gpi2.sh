@@ -32,7 +32,7 @@ if [ -e $script ];
 fi
 wget --no-check-certificate -O  "/opt/RetroFlag/lcdfirst.sh" "$filewebsite""/lcdfirst.sh"
 wget --no-check-certificate -O  "/opt/RetroFlag/lcdnext.sh" "$filewebsite""/lcdnext.sh"
-wget --no-check-certificate -O  "/opt/RetroFlag/LCD.sh" "$filewebsite""/LCD.sh"
+#wget --no-check-certificate -O  "/opt/RetroFlag/LCD.sh" "$filewebsite""/LCD.sh"
 
 #-----------------------------------------------------------
 
@@ -57,7 +57,7 @@ if grep -q "python $script &" "$DIR";
 #		echo -e "python $script & \n/opt/RetroFlag/LCD.sh \n" >> $DIR 
 #		echo "python $script &" >> $DIR
 		chmod +x $DIR
-		chmod +x /opt/RetroFlag/LCD.sh
+#		chmod +x /opt/RetroFlag/LCD.sh
 		chmod +x /opt/RetroFlag/lcdfirst.sh
 		chmod +x /opt/RetroFlag/lcdnext.sh
 		echo "Executable S99RetroFlag configured."
