@@ -1,5 +1,5 @@
 #!/bin/bash
-filewebsite="https://raw.githubusercontent.com/lyat97/G2script/main"
+filewebsite="https://raw.githubusercontent.com/RetroFlag/GPiCase2-Script/main"
 sleep 2s
 #Step 1) Check if root--------------------------------------
 if [[ $EUID -ne 0 ]]; then
