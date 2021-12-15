@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SourcePath=https://raw.githubusercontent.com/lyat97/G2script/main
+SourcePath=https://raw.githubusercontent.com/RetroFlag/GPiCase2-Script/main
 
 #-----------------------------------------------------------
 sleep 2s
