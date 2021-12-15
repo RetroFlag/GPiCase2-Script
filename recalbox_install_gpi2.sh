@@ -1,7 +1,7 @@
 #!/bin/bash
 #Step 1 make /boot writable---------------------------------
 sleep 2s
-filewebsite="https://raw.githubusercontent.com/lyat97/G2script/main"
+filewebsite="https://raw.githubusercontent.com/RetroFlag/GPiCase2-Script/main"
 
 mount -o remount, rw /boot
 mount -o remount, rw /
