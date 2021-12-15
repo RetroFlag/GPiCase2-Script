@@ -8,7 +8,7 @@ For RetroPie4.7.1:
 3. Press F4 enter terminal.
 4. In the terminal, type the one-line command below(Case sensitive):
 
-wget -O - "https://raw.githubusercontent.com/lyat97/G2script/main/retropie_install_gpi2.sh" | sudo bash
+wget -O - "https://raw.githubusercontent.com/RetroFlag/GPiCase2-Script/main/retropie_install_gpi2.sh" | sudo bash
 
 --------------------
 Only for Recalbox7.1.1/8.0
@@ -18,7 +18,7 @@ Only for Recalbox7.1.1/8.0
 4. User: root Password: recalboxroot
 5. In the terminal, type the one-line command below(Case sensitive):
 
-wget -O - "https://raw.githubusercontent.com/lyat97/G2script/main/recalbox_install_gpi2.sh" | bash
+wget -O - "https://raw.githubusercontent.com/RetroFlag/GPiCase2-Script/main/recalbox_install_gpi2.sh" | bash
 
 
 --------------------
@@ -30,7 +30,7 @@ Example for batocera31:
 4. User: root Password: linux
 5. In the terminal, type the one-line command below(Case sensitive):
 
-wget -O - "https://raw.githubusercontent.com/lyat97/G2script/main/batocera_install_gpi2.sh" | bash
+wget -O - "https://raw.githubusercontent.com/RetroFlag/GPiCase2-Script/main/batocera_install_gpi2.sh" | bash
 
 --------------------
 
