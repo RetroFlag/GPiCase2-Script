@@ -1,6 +1,10 @@
 # GPiCase2-Script
 RetroFlag GPiCase 2 CM4 Safeshutdown with automatically switch LCD and HDMI display script
 
+After install script：
+1.safe shutdown:Directly turning off the power switch will trigger the script for safe shutdown.
+2.If it is not turned on the charging base, it will be displayed on a 3-inch LCD;When the base is connected, it will be switched to HDMI output
+
 For RetroPie4.7.1:
 
 1. Make sure internet connected.
