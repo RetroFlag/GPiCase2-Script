@@ -3,7 +3,8 @@ RetroFlag GPiCase 2 CM4 Safeshutdown with automatically switch LCD and HDMI disp
 
 ## Before install script：
 **Make sure that GPiCase2 patch is installed.**  
-If the patch file is not installed and Install the script first, you will lose “config.txt” file causes CM4 to fail to boot
+If the patch file is not installed and Install the script first, you will lose “config.txt” file causes CM4 to fail to boot  
+Click the link to download the patch：[Download GPiCase2 patch](https://github.com/RetroFlag/GPiCase2-Script/raw/main/GPi_Case2_patch.zip).
 
 ## After install script：
 1. safe shutdown:Directly turning off the power switch will trigger the script for safe shutdown.
@@ -16,7 +17,7 @@ If the patch file is not installed and Install the script first, you will lose �
 3. Press F4 enter terminal.
 4. In the terminal, type the one-line command below(Case sensitive):
 
-wget -O - "https://raw.githubusercontent.com/RetroFlag/GPiCase2-Script/main/retropie_install_gpi2.sh" | sudo bash
+`wget -O - "https://raw.githubusercontent.com/RetroFlag/GPiCase2-Script/main/retropie_install_gpi2.sh" | sudo bash`
 
 --------------------
 ### For Recalbox7.1.1/8.0
@@ -26,7 +27,7 @@ wget -O - "https://raw.githubusercontent.com/RetroFlag/GPiCase2-Script/main/retr
 4. User: root Password: recalboxroot
 5. In the terminal, type the one-line command below(Case sensitive):
 
-wget -O - "https://raw.githubusercontent.com/RetroFlag/GPiCase2-Script/main/recalbox_install_gpi2.sh" | bash
+`wget -O - "https://raw.githubusercontent.com/RetroFlag/GPiCase2-Script/main/recalbox_install_gpi2.sh" | bash`
 
 
 --------------------
@@ -38,7 +39,7 @@ wget -O - "https://raw.githubusercontent.com/RetroFlag/GPiCase2-Script/main/reca
 4. User: root Password: linux
 5. In the terminal, type the one-line command below(Case sensitive):
 
-wget -O - "https://raw.githubusercontent.com/RetroFlag/GPiCase2-Script/main/batocera_install_gpi2.sh" | bash
+`wget -O - "https://raw.githubusercontent.com/RetroFlag/GPiCase2-Script/main/batocera_install_gpi2.sh" | bash`
 
 --------------------
 
