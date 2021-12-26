@@ -27,6 +27,7 @@ File=/usr/share/alsa/alsa.conf
 					echo " defaults.ctl.card 0" >> $File
 					echo "HDMI ADUIO enabled."
 				fi
+				sudo cp -f "/boot/config.txt" "/boot/config_lcd.txt"
 				sudo rm -f /boot/config.txt
 				sudo cp -f "/boot/config_hdmi.txt" "/boot/config.txt"
 		  fi
