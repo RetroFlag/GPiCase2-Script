@@ -19,6 +19,8 @@ if [ $HDMI_HPD_VALUE == "1" ]; then
 	if [ $ISLCDFILE == "1" ]; then  
 		mount -o remount, rw /boot
 		mount -o remount, rw /	 
+		rm -f /boot/config_lcd.txt
+		cp -f "/boot/config.txt" "/boot/config_lcd.txt"
 		rm -f /boot/config.txt
 		cp -f "/boot/config_hdmi.txt" "/boot/config.txt"
 		shutdown -r now  
@@ -28,6 +30,8 @@ else
 	if [ $ISLCDFILE == "0" ]; then 
 		mount -o remount, rw /boot
 		mount -o remount, rw /	 
+		rm -f /boot/config_hdmi.txt
+		cp -f "/boot/config.txt" "/boot/config_hdmi.txt"
 		rm -f /boot/config.txt
 		cp -f "/boot/config_lcd.txt" "/boot/config.txt"
 		shutdown -r now 
