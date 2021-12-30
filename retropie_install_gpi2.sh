@@ -6,23 +6,10 @@ if [[ $EUID -ne 0 ]]; then
    echo "Please execute script as root." 
    exit 1
 fi
-
-
 #-----------------------------------------------------------
 
-#Step 3) Update repository----------------------------------
-#sudo apt-get update -y
 
-#sleep 2s
-#-----------------------------------------------------------
-
-#Step 4) Install gpiozero module----------------------------
-#sudo apt-get install -y python3-gpiozero
-
-#sleep 2s
-#-----------------------------------------------------------
-
-#Step 5) Download Python script-----------------------------
+#Step 2) Download Python script-----------------------------
 cd /opt/
 sudo mkdir RetroFlag
 cd /opt/RetroFlag
@@ -36,11 +23,15 @@ if [ -e $script ];
 fi
 wget --no-check-certificate -O  "lcdfirst.sh" "$filewebsite""/retropielcdfirst.sh"
 wget --no-check-certificate -O  "lcdnext.sh" "$filewebsite""/retropielcdnext.sh"
-#wget --no-check-certificate -O  "LCD.sh" "$filewebsite""/LCD.sh"
+
+
+cd /etc/modprobe.d
+wget --no-check-certificate -O  "alsa-base.conf" "$filewebsite""/alsa-base.conf"
+
 
 #-----------------------------------------------------------
 sleep 2s	
-#Step 6) Enable Python script to run on start up------------
+#Step 3) Enable Python script to run on start up------------
 cd /etc/
 RC=rc.local
 
@@ -53,7 +44,7 @@ if grep -q "sh \/opt\/RetroFlag\/lcdfirst.sh\& \nsleep 1\& \nsudo python \/opt\/
 fi
 #-----------------------------------------------------------
 
-#Step 7) Reboot to apply changes----------------------------
+#Step 4) Reboot to apply changes----------------------------
 echo "RetroFlag Pi Case installation done. Will now reboot after 3 seconds."
 sleep 3s
 sudo reboot
