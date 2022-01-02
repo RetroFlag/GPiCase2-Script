@@ -41,3 +41,6 @@ hdmi_ignore_cec_init=1
 ################################################################################
 [all]
 include distroconfig.txt
+
+# activate USB sockets
+dtoverlay=dwc2,dr_mode=host
