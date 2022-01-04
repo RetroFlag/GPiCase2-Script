@@ -1,0 +1,95 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Copyright (C) 2009-2014 Stephan Raue (stephan@openelec.tv)
+# Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
+################################################################################
+# Bootloader configuration - config.txt
+################################################################################
+
+################################################################################
+# Memory (System/GPU configuration )
+################################################################################
+
+# Default GPU memory split - at least 288M is needed for some 4k HEVC files
+gpu_mem=384
+
+################################################################################
+# For overclocking and various other settings, see:
+# https://www.raspberrypi.org/documentation/configuration/config-txt.md
+################################################################################
+# Set 'force_turbo=1' to disable dynamic overclocking and enable overclocking always.
+force_turbo=0
+
+# Force HDMI even if unplugged or powered off
+# hdmi_force_hotplug=1
+
+# Doesn't sent initial active source message.
+# Avoids bringing CEC (enabled TV) out of standby and channel switch when
+# rebooting.
+hdmi_ignore_cec_init=1
+
+################################################################################
+# End of default configuration
+################################################################################
+
+# Choose between DVI and HDMI output
+# 1 = DVI mode (no sound)
+# 2 = HDMI mode (sound will be sent if supported and enabled)
+# hdmi_drive=2
+
+################################################################################
+# Include distribution specific config file if it exists.
+################################################################################
+[all]
+# Enable DRM VC4 V3D driver on top of the dispmanx display stack
+# Preferred 'Full' Kernel Mode Setting (KMS)
+# dtoverlay=vc4-kms-v3d-pi4
+# Optional 'Fake' KMS for displays that won't work with 'Full' KMS
+dtoverlay=vc4-fkms-v3d
+
+dtoverlay=rpivid-v4l2
+disable_overscan=1
+disable_splash=1
+dtparam=audio=on
+hdmi_max_pixel_freq:0=200000000
+hdmi_max_pixel_freq:1=200000000
+arm_64bit=1
+kernel=kernel.img
+
+# if you plug your tv at the same time as your rpi and that the rpi switches from the hdmi or give a low resolution because tv had no enough time to initialize it
+# boot_delay=3
+
+# uncomment if you have slow sound issues on composite output
+#audio_pwm_mode=0
+
+# enable UART (required for for retroflag)
+# affect rpi performances
+# enable_uart=1
+
+# activate USB sockets
+dtoverlay=dwc2,dr_mode=host
+
+# Ensure only one display output can be used on the Pi4
+max_framebuffers=1
+
+[DPI]
+# Put any DPI required display code here
+# i.e. Official 7" DSI Raspberry Pi Touch Display for 'Full' KMS
+#ignore_lcd=1
+#dtoverlay=vc4-kms-dsi-7inch
+display_rotate=0
+dtoverlay=dpi24
+overscan_left=0
+overscan_right=0
+overscan_top=0
+overscan_bottom=0
+framebuffer_width=640
+framebuffer_height=480
+#framebuffer_depth=8
+enable_dpi_lcd=1
+display_default_lcd=1
+dpi_group=2
+dpi_mode=87
+dpi_output_format=0x00016
+hdmi_timings=640 0 41 40 41 480 0 18 9 18 0 0 0 60 0 24000000 1   #80hz
+#hdmi_timings=640 0 20 1 20 480 0 1 1 2 0 0 0 60 0 24000000 1  #59hz
+
