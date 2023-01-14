@@ -5,6 +5,7 @@ The RetroFlag GPiCase 2 CM4 safe shutdown script will automatically switch betwe
 **Make sure that the GPiCase2 patch is installed.**  
 If the patch file is not installed and you install the script first, you will lose the “config.txt” file, which will cause the CM4 to fail to boot.  
 Click the link to download the patch：[Download GPiCase2 patch](https://github.com/RetroFlag/GPiCase2-Script/raw/main/GPi_Case2_patch.zip).
+`Be careful!: This PATCH does not need to be installed in recalbox 8.1.1`
 
 ## After installing the script：
 1. Safe shutdown: Directly turning off the power switch will trigger the script for safe shutdown.
@@ -21,6 +22,7 @@ Click the link to download the patch：[Download GPiCase2 patch](https://github.
 
 --------------------
 ### For Recalbox7.1.1/8.0
+`Be careful!: This script does not need to be installed in recalbox 8.1.1`
 1. Make sure you are connected to the internet.
 2. Make sure your keyboard is connected.
 3. Press F4, and then press ALT-F2 to enter the terminal.
